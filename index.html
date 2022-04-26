@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .mySlides {display:none;}
+    .mySlide {display:none;}
+    </style>
+</head>
+<body>
+ <nav>
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="resourse.html">Course</a></li>
+    <li><a href="about.html">About us</a></li>
+    <li><a href="neibu.html">Internal site</a></li>
+</nav>
+<form>
+  <label for="fname">quick search:</label>
+  <input type="text" id="fname" name="fname">
+  <label for="lname">The page number:</label>
+  <input type="number" id="lname" name="lname" value="Doe">
+  <input type="submit" value="Submit">
+</form>
+<img src="p1.png"class='writer-img'> 
+    <h2><b>Welcome to HBCC</b></h1>
+  <div class="column side" style="background-color:#b3ffb3;"><p class="xxx">News of the school<p>
+    <table>
+  <tr>
+    <th>A notice from the school about enrollment</th>
+  </tr>
+   <tr>
+    <th>A notice from the school about the holidays</th>
+  </tr>
+   <tr>
+    <th>A notice from the school about the activity</th>
+  </tr>
+</table></div>
+  <div class="column middle" style="background-color:#33ccff;">
+    <img src="p3.jpg"class="qq">
+    <img src="p4.jpg"class="qq">
+  </div>
+  <div class="column side" style="background-color:#b3ffb3;">
+    <p class="xxx">The campus scenery</p>
+    <img class="mySlides" src="p5.png" style="width:100%">
+    <img class="mySlides" src="p6.png" style="width:100%">
+<img class="mySlides" src="p9.jpg" style="width:100%">
+  </div>
+  <script>
+    var myIndex = 0;
+    carousel();
+    
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";  
+      }
+      myIndex++;
+      if (myIndex > x.length) {myIndex = 1}    
+      x[myIndex-1].style.display = "block";  
+      setTimeout(carousel, 2000); // Change image every 2 seconds
+    }
+    </script>    
+<style>
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+</style>
+<div class="footer">
+  <p>Footer</p>
+</div>
+</body>
+</html>
